@@ -1,0 +1,25 @@
+<!--
+  Custom Wazuh Decoder — Squid Proxy Access Log
+  =================================================
+  Built to replace Wazuh's built-in "squid-accesslog" decoder
+  (defined in 0305-squid_decoders.xml), which was found not to
+  match its own documented example log line in this Wazuh
+  installation (v4.9.2) — see the project write-up, sections
+  17.3–17.4, for the full investigation.
+
+  This decoder parses Squid's standard access.log format:
+    <unix_timestamp> <duration> <client_ip> <ACTION>/<status> <bytes> <method> <url>
+
+  Example matching log line:
+    1784080268.565    41 127.0.0.1 TCP_MISS/502 3475 GET http://example.com/ - HIER_NONE/- text/html
+-->
+
+<decoder name="custom-squid-syslog">
+  <prematch>TCP_\S+|UDP_\S+|NONE_\S+</prematch>
+</decoder>
+
+<decoder name="custom-squid-syslog">
+  <parent>custom-squid-syslog</parent>
+  <regex>(\d+\.\d+)\s+(\d+)\s+(\S+)\s+(\w+)/(\d+)\s+(\d+)\s+(\S+)\s+(\S+)</regex>
+  <order>id,duration,srcip,action,custom_status,bytes,method,url</order>
+</decoder>
