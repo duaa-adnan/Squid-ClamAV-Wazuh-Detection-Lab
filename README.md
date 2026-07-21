@@ -113,7 +113,7 @@ By the end of Week 3, I had a working malware detection and monitoring pipeline:
 - Full Technical Report 
 - Incident Response Plan 
 - Custom Wazuh Decoder & Rule
-- LinkedIn Post Link: 
+- LinkedIn Post Link: https://www.linkedin.com/posts/duaa-adnan_squid-proxy-clamav-incident-response-ugcPost-7483185568735088641-3kAC/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADZXX2kBVoIL7tdPW2-3qH6yuAHAwQAOOec
 
 ## Future Improvements
 - Resolve the ICAP integration between Squid and ClamAV for inline file scanning
