@@ -1,7 +1,7 @@
 Blue Team Internship. ITSimplera Solutions
+
 Week 3 Task: Malware Detection & Monitoring with pfSense, Squid, ClamAV & Wazuh
 
-Internship Track Tool Status
 
 Author: Duaa Bint E Adnan
 
